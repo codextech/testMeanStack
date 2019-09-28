@@ -1,0 +1,39 @@
+.text-theme,
+.text-hover-theme a:hover,
+.text-hover-theme .active > a {
+  color: #6284f3 !important; }
+
+.nav-active-theme .nav-link.active,
+.nav-active-theme .nav > li.active > a,
+.btn.theme,
+.btn.b-theme:hover,
+.btn.b-theme:focus,
+.pace .pace-progress,
+.theme {
+  color: rgba(255, 255, 255, 0.85) !important;
+  background-color: #6284f3 !important; }
+
+.b-theme,
+.nav-border,
+nav.nav-border {
+  border-color: #6284f3 !important; }
+
+.btn.theme-accent,
+.btn.b-theme-accent:hover,
+.btn.b-theme-accent:focus {
+  color: rgba(255, 255, 255, 0.85) !important;
+  background-color: #907eec !important; }
+
+.theme-accent {
+  color: rgba(255, 255, 255, 0.85) !important;
+  background-color: #907eec !important; }
+
+.sidenav .nav-border .active > a,
+.sidenav .nav-active-text .active > a {
+  color: #6284f3; }
+
+.fill-theme {
+  fill: #6284f3; }
+
+.stroke-theme {
+  stroke: #6284f3; }

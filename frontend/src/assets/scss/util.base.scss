@@ -1,0 +1,90 @@
+/*
+Base
+*/
+.pos-rlt{
+  position: relative;
+  z-index: 1;
+}
+.pos-abt{
+  position: absolute;
+}
+.pos-fix{
+  position: fixed !important;
+}
+.pos-stc{
+  position: static !important;
+}
+
+.active > .d-inline, 
+.active > .auto .d-inline{
+  display: none !important;
+}
+.active > .d-none, 
+.active > .auto .d-none{
+  display: inline-block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.show-rtl{
+  display: none !important;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.circle{
+  border-radius: 500px;
+}
+
+.clear{
+  display:block;
+  overflow: hidden;
+}
+
+.flex{
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.no-shrink{
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.no-grow{
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.no-shadow{
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.p-2-3{
+  padding: 0.75rem;
+}
+
+.p-3-4{
+  padding: 1.25rem;
+}
+
+@include media-breakpoint-down(sm) {
+  .pos-stc-sm{
+    position: static !important;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .pos-stc-xs{
+    position: static !important;
+  }
+}

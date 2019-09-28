@@ -1,0 +1,24 @@
+/*
+Nav cative style
+*/
+@mixin active-variant($parent, $bg, $color) {
+  .nav-active-#{$parent}{
+  	.nav-link.active,
+  	.nav > li.active > a{
+  		color: $color !important;
+		background-color: $bg !important;
+  	}
+  }
+}
+
+@include active-variant(bg, $body-bg, $text-color);
+@include active-variant(dark, $dark, $dark-color);
+@include active-variant(primary, $primary, $primary-color);
+@include active-variant(accent, $accent, $accent-color);
+@include active-variant(warn, $warn, $warn-color);
+@include active-variant(success, $success, $success-color);
+@include active-variant(info, $info, $info-color);
+@include active-variant(warning, $warning, $warning-color);
+@include active-variant(danger, $danger, $danger-color);
+@include active-variant(light, $light, $light-color);
+@include active-variant(white, $white, $dark-black);

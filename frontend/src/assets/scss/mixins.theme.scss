@@ -1,0 +1,46 @@
+@mixin theme($bg, $color, $accent, $accent-color){
+	.text-theme, 
+	.text-hover-theme a:hover, 
+	.text-hover-theme .active > a{
+	  color: $bg !important;
+	}
+	.nav-active-theme .nav-link.active, 
+	.nav-active-theme .nav > li.active > a,
+	.btn.theme,
+	.btn.b-theme:hover,
+	.btn.b-theme:focus,
+	.pace .pace-progress,
+	.theme{
+	  color: $color !important;
+	  background-color: $bg !important;
+	}
+
+	.b-theme,
+	.nav-border,
+	nav.nav-border{
+	  border-color: $bg !important;
+	}
+	.btn.theme-accent,
+	.btn.b-theme-accent:hover,
+	.btn.b-theme-accent:focus{
+		color: $accent-color !important;
+	  	background-color: $accent !important;
+	}
+	
+	.theme-accent{
+		color: $accent-color !important;
+	  	background-color: $accent !important;
+	}
+
+	.sidenav .nav-border .active > a,
+	.sidenav .nav-active-text .active > a{
+		color: $bg;
+	}
+
+	.fill-theme{
+	  fill: $bg;
+	}
+	.stroke-theme{
+	  stroke: $bg;
+	}
+}

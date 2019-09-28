@@ -1,0 +1,58 @@
+<div class="container bootstrap snippet">
+
+  <div class="row">
+
+
+
+    <div *ngFor="let item of posts" class="col-md-6 col-sm-12 mt-2">
+        <div class="panel panel-white post panel-shadow">
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="https://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b>{{item.title}}</b></a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="post-description">
+                <p>{{item.description}}</p>
+                <div class="stats">
+                    <a href="#" class="btn btn-default stat-item">
+                        <i class="fa fa-comments icon"></i> {{item.comments.length}}
+                    </a>
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="input-group">
+                    <input #commentText  class="commText form-control" placeholder="Add a comment" type="text">
+                    <span class="input-group-addon">
+
+                        <a class= "btn primary" (click)="addComment(commentText.value, item._id)">
+                          Submit <i class="fa fa-plus"></i>
+                        </a>
+                    </span>
+                </div>
+                <ul class="comments-list">
+                    <li *ngFor="let c of item.comments"  class="comment">
+                        <a class="pull-left" href="#">
+                            <img class="avatar" src="https://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                        </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="user">User</h4>
+                            </div>
+                            <p>{{c.content}}</p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  </div>
+
+</div>

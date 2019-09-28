@@ -1,0 +1,196 @@
+/*
+Nav
+*/
+.sidenav {
+	border: inherit;
+	margin: 0;
+	pointer-events: inherit;
+	display: -ms-flexbox;
+    display: flex;
+	-ms-flex-direction: column;
+    flex-direction: column;
+	ul{
+		padding-left: 0;
+		padding-right: 0;
+  		list-style: none;
+	}
+	.nav {
+		border: inherit;
+		display: block;
+		li {
+			border: inherit;
+			position: relative;
+			li {
+				a {
+					line-height: $aside-nav-sub-height;
+					padding-left: 1rem + $aside-nav-height + $aside-nav-icon-margin;
+					.nav-text{
+						padding: ($aside-nav-sub-height - 1.125)/2 0;
+					}
+				}
+				li a{
+					padding-left: 2rem + $aside-nav-height + $aside-nav-icon-margin;
+				}
+				li li a{
+					padding-left: 3rem + $aside-nav-height + $aside-nav-icon-margin;
+				}
+			}
+			> a{
+				@include clearfix();
+				display: block;
+				padding: 0 1.25rem;
+				line-height: $aside-nav-height;
+				position: relative;
+				white-space: nowrap;
+				&:hover,
+				&:focus{
+					background-color: $min-white;
+				}
+			}
+			&.active{
+				> a {
+					background-color: transparent;
+					.nav-caret i{
+						@include rotate(180deg);
+					}
+				}
+			}
+		}
+	}
+	.nav-header{
+		padding: 0.5rem 1.25rem;
+		> span{
+			opacity: 0.4;
+		}
+		&:after{
+			display: none;
+		}
+	}
+	.navbar-brand{
+		float: none;
+		margin-right: 0;
+	}
+  	.flex{
+  		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+  	}
+}
+
+.nav-fold{
+	display: -ms-flexbox!important;
+    display: flex!important;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav-text{
+	display: block;
+	line-height: 1.125rem;
+	font-weight: 500;
+	transition: opacity .15s ease-in-out;
+	padding: ($aside-nav-height - 1.125)/2 0;
+	span,
+	small{
+		display: block;
+	}
+	.sidenav &{
+		opacity: 0.75;
+	}
+	.sidenav a:hover > &,
+	.sidenav a:focus > &,
+	.sidenav .active > a > &{
+		opacity: 1;
+	}
+	.navbar & {
+		line-height: 1;
+		vertical-align: middle;
+		display: inline-block;
+		padding: 0;
+		span.text-xs{
+			margin-top: 0.25rem;
+		}
+	}
+}
+
+.nav-icon {
+	float: left;
+	margin-right: $aside-nav-icon-margin;
+	margin-left: -0.25rem;
+	font-size: $aside-nav-icon-size;
+	top: 0;
+	width: $aside-nav-height;
+	height: $aside-nav-height;
+	text-align: center;
+	border-radius: 100%;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: font-color .15s ease-in-out;
+	i{
+		position: relative;
+		line-height: 1;
+		transition: all .15s ease-in-out;
+		svg,
+		img{
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.sidenav &{
+		opacity: 0.35;
+	}
+	&.no-fade{
+		opacity: 1 !important;
+	}
+	.sidenav a:hover > &,
+	.sidenav a:focus > &,
+	.sidenav .active > a > &{
+		opacity: 1;
+	}
+	.navbar & {
+		margin-right: 0.5rem;
+	}
+}
+
+.nav-badge{
+	float: right;
+	margin-left: 1rem;
+	font-style: normal;
+	z-index: 1;
+	
+	.navbar & {
+		margin-left: 0.5rem;
+	}
+	.badge{
+		vertical-align: 1px;
+	}
+}
+
+.nav-caret{
+	float: right;
+	margin-left: 1rem;
+	opacity: 0.45;
+	i{
+		@include transition(transform 0.3s ease-in-out);
+	}
+
+	.navbar & {
+		margin-left: 0.5rem;
+	}
+}
+
+.nav-sub{
+  max-height: 0;
+  overflow: hidden;
+  @include transition(max-height 0.4s ease 0s);
+  .active > &{
+    max-height: 50rem;
+  }
+}

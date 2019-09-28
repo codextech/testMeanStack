@@ -1,0 +1,29 @@
+/*
+Popover
+*/
+
+.popover{
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.popover-header{
+  font-size: 0.9rem;
+  border-color: rgba(0, 0, 0, 0.05);
+  background-color: lighten( $light, 2% );
+}
+
+.popover-body{
+  font-size: $font-size;
+  color: $dark-black;
+  p:last-child{
+    margin: 0;
+  }
+}
+
+.popover .arrow:before{
+  opacity: 0.45;
+}
+
+.tooltip{
+  font-size: $font-size;
+}

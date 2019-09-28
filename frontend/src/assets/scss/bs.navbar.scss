@@ -1,0 +1,36 @@
+/*
+Navbar 
+*/
+.navbar{
+	min-height: $navbar-height;
+	display: -ms-flexbox;
+    display: flex;
+    .dropdown-menu-right{
+	    left: auto;
+	    right: 0;
+	}
+	svg{
+		vertical-align: middle;
+		fill: currentColor;
+	}
+}
+
+.nav-title{
+	font-size: 1.125rem;
+	line-height: 1.2;
+}
+
+.navbar-brand{
+	font-size: 1.125rem;
+	line-height: 1;
+	> span {
+	    margin: 0 0.25rem;
+	    font-weight: 600;
+	}
+	img,
+	svg{
+		max-height: $navbar-brand-height;
+		vertical-align: middle;
+		font-weight: 600;
+	}
+}

@@ -1,0 +1,136 @@
+/*
+Colors
+*/
+@mixin color-variant($bg, $color) {
+  color: $color;
+  background-color: $bg;
+  &.lt,
+  .lt{
+		background-color: lighten($bg, $color-percent);
+	}
+  &.dk,
+  .dk{
+		background-color: darken($bg, $color-percent);
+	}
+  &.bg,
+  .bg{
+    background-color: $bg;
+  }
+}
+
+.light{
+  background-color: $light;
+}
+
+.white{
+  background-color: #fff;
+}
+
+.dark-white{
+  color: $dark-black !important;
+  background-color: #fff !important;
+}
+
+.dark-light{
+  color: $dark-black;
+  background-color: $light;
+}
+
+.dark {
+  @include color-variant($dark, $dark-color);
+}
+
+.primary {
+	@include color-variant($primary, $primary-color);
+}
+
+.accent {
+  @include color-variant($accent, $accent-color);
+}
+
+.warn {
+  @include color-variant($warn, $warn-color);
+}
+
+.success {
+	@include color-variant($success, $success-color);
+}
+
+.info {
+  @include color-variant($info, $info-color);
+}
+
+.warning {
+	@include color-variant($warning, $warning-color);
+}
+
+.danger {
+	@include color-variant($danger, $danger-color);
+}
+
+.white-overlay{
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.black-overlay{
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.gd-overlay{
+  background-color: transparent !important;
+  @include gradient-y(rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+.bg-clip{
+  background-clip: padding-box;
+}
+
+.bg-body{
+  background-color: $body-bg;
+}
+
+.no-bg{
+  background: transparent !important; 
+}
+
+[class*="bg-auto"]{
+  position: static;
+  &:before{
+    position: absolute;
+    width: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: inherit;
+    border: inherit;
+  }
+  &.b-l:before{
+    margin-left: -1px;
+  }
+  &.b-r:before{
+    margin-right: -1px;
+  }
+}
+
+@include media-breakpoint-up(xs) {
+  .bg-auto-xs:before{
+    content: "";
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .bg-auto-sm:before{
+    content: "";
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .bg-auto-md:before{
+    content: "";
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bg-auto-lg:before{
+    content: "";
+  }
+}

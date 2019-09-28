@@ -1,0 +1,41 @@
+
+
+
+ <link rel="stylesheet" href="/assets/libs/font-awesome/css/font-awesome.min.css" type="text/css" />
+
+ <link rel="stylesheet" href="/assets/libs/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+ <link rel="stylesheet" href="/assets/css/app.css" type="text/css" />
+ <link href="/assets/css/syncfusion-richtext.css" rel="stylesheet" />
+
+
+
+<div class="app" id="app">
+ <!-- ############ LAYOUT START-->
+ <!-- ############ Aside START-->
+ <app-sidebar></app-sidebar>
+ <!-- ############ Aside END-->
+ <!-- ############ Content START-->
+ <div id="content" class="app-content box-shadow-0" role="main">
+     <!-- Header -->
+     <app-header></app-header>
+     <!-- Main -->
+     <div class="content-main " id="content-main">
+
+         <!-- ############ Main START-->
+         <router-outlet></router-outlet>
+
+                <!-- ############ Main END-->
+     </div>
+     <!-- Footer -->
+     <div class="content-footer white " id="content-footer">
+         <div class="d-flex p-3">
+             <span class="text-sm text-muted flex">&copy; Copyright. Flatfull</span>
+             <div class="text-sm text-muted">Version 1.2.0</div>
+         </div>
+     </div>
+ </div>
+ <!-- ############ Content END-->
+ <!-- ############ LAYOUT END-->
+</div>
+
+

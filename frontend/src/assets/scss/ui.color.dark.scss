@@ -1,0 +1,21 @@
+/*
+Dark theme
+*/
+.dark{
+  .white,
+  .box,
+  .list-group{
+    background-color: lighten( $dark, $color-dk-percent );
+  }
+  .app{
+    background-color: lighten( $dark, 1% );
+  }
+  .form-control{
+    background: transparent;
+  }
+  .input-group-btn{
+    .btn{
+      background-color: $border-color-lt;
+    }
+  }
+}

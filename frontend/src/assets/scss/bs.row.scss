@@ -1,0 +1,57 @@
+/*
+Row 
+*/
+
+.padding{
+  padding: 2rem;
+}
+
+.row-sm{
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  [class*="col-"],
+  .col{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+.row-xs{
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  [class*="col-"],
+  .col{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .padding{
+    padding: 1.5rem;
+  }
+  .row:not(.no-gutters){
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    [class*="col-"],
+    .col{
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .padding{
+    padding: 1rem;
+  }
+  .row:not(.no-gutters){
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    [class*="col-"],
+    .col{
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}

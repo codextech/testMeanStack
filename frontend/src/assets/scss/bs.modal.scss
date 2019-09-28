@@ -1,0 +1,180 @@
+/*
+Modal 
+*/
+.modal.fade{
+  .modal-left,
+  .modal-right,
+  .modal-top,
+  .modal-bottom {
+    position: fixed;
+    z-index: 1055;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  .modal-left {
+    right: auto;
+    @include translate3d(-100%, 0, 0);
+    @include transition-transform(0.3s cubic-bezier(0.25, 0.8, 0.25, 1));
+  }
+  .modal-right {
+    left: auto;
+    @include translate3d(100%, 0, 0);
+    @include transition-transform(0.3s cubic-bezier(0.25, 0.8, 0.25, 1));
+  }
+  .modal-top {
+    bottom: auto;
+    @include translate3d(0, -100%, 0);
+    @include transition-transform(0.3s cubic-bezier(0.25, 0.8, 0.25, 1));
+  }
+  .modal-bottom {
+    top: auto;
+    @include translate3d(0, 100%, 0);
+    @include transition-transform(0.3s cubic-bezier(0.25, 0.8, 0.25, 1));
+  }
+  &.show{
+    .modal-left,
+    .modal-right,
+    .modal-top,
+    .modal-bottom { 
+      @include translate3d(0, 0, 0);
+    }
+  }
+  &.inactive{
+    bottom: auto;
+    overflow: visible;
+  }
+}
+
+.modal-open-aside{
+  overflow: visible;
+}
+
+.modal-header,
+.modal-content,
+.modal-footer{
+  border-color: $border-color;
+}
+
+.modal-dialog > *{
+  pointer-events: auto;
+}
+
+.modal-content{
+  color: $dark-black;
+}
+
+.modal-close-btn{
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.aside{
+  opacity: 1 !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: relative;
+  z-index: 1000;
+  &.show{
+    width: 100% !important;
+    top: 0;
+    bottom: 0;
+    > *{
+      left: 0;
+      @include translate3d(0, 0, 0);
+    }
+  }
+  > *{
+      @include transition-transform(0.4s cubic-bezier(0.25, 0.8, 0.25, 1));
+  }
+  > .modal-dialog{
+    margin: 0;
+    max-width: inherit;
+    pointer-events: inherit;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .aside-lg{
+    display: none;
+    position: fixed !important;
+    z-index: 1050 !important;
+    left: 0;
+    > *{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 280px !important;
+      @include translate3d(-100%, 0, 0);
+    }
+    ~ *{
+      width: 100%;
+    }
+  }
+  .aside-lg-right{
+    > *{
+      @include translate3d(100%, 0, 0);
+      right: 0;
+      left: auto !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .aside-md{
+    display: none;
+    position: fixed !important;
+    background: transparent !important;
+    z-index: 1050 !important;
+    > *{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 280px !important;
+      @include translate3d(-100%, 0, 0);
+    }
+    ~ *{
+      width: 100%;
+    }
+  }
+  .aside-md-right{
+    > *{
+      @include translate3d(100%, 0, 0);
+      right: 0;
+      left: autoo !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .aside-sm{
+    display: none;
+    background: transparent !important;
+    position: fixed !important;
+    z-index: 1050 !important;
+    > *{
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      max-width: 280px !important;
+      @include translate3d(-100%, 0, 0);
+    }
+    ~ *{
+      width: 100%;
+    }
+  }
+  .aside-sm-right{
+    > *{
+      @include translate3d(100%, 0, 0);
+      right: 0;
+      left: auto !important;
+    }
+  }
+}

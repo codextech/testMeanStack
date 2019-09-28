@@ -1,0 +1,40 @@
+ <!-- Header -->
+ <div class="content-header white blue" id="content-header">
+        <div class="navbar navbar-expand-lg">
+                <!-- btn to toggle sidenav on small screen -->
+                <a class="d-lg-none mx-2" data-toggle="modal" data-target="#aside">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                        <path d="M 80 304 h 352 v 16 H 80 Z M 80 248 h 352 v 16 H 80 Z M 80 192 h 352 v 16 H 80 Z" />
+                    </svg>
+                </a>
+                <!-- Page title -->
+                <ul class="nav flex-row order-lg-2">
+
+                    <!-- User dropdown menu -->
+                    <li class="dropdown d-flex align-items-center">
+                        <a class="d-flex align-items-center" href="#" data-toggle="dropdown">
+                            <span class="avatar w-32">
+  <img alt="..." src="../../../../assets/profilejpg.jpg">
+</span>
+                            <span class=" mx-2 d-none l-h-1x d-lg-block">
+  <span></span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right w pt-0 mt-2 animate fadeIn">
+                            <a class="dropdown-item"  (click)="logout()">Sign out</a>
+                        </div>
+                    </li>
+                    <!-- Navarbar toggle btn -->
+                    <li class="d-lg-none d-flex align-items-center">
+                        <a class="mx-2" aria-expanded="true" href="#" data-toggle="collapse" data-target="#navbarToggler">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="18" height="18">
+                                <path d="M 64 144 h 384 v 32 H 64 Z M 64 240 h 384 v 32 H 64 Z M 64 336 h 384 v 32 H 64 Z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+</div>

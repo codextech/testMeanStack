@@ -1,0 +1,104 @@
+$full-black:  		rgba(0, 0, 0, 1);
+$light-black: 		rgba(0, 0, 0, 0.85);
+$dark-black:  		rgba(70, 90, 110, 0.85);
+$min-black:   		rgba(0, 0, 0, 0.05);
+
+$full-white:  		rgba(255, 255, 255, 1);
+$light-white: 		rgba(255, 255, 255, 0.85);
+$dark-white:  		rgba(160, 180, 200, 0.85);
+$min-white:   		rgba(255, 255, 255, 0.065);
+
+$primary:           #53a6fa;
+$accent:            #6284f3;
+$warn:              #907eec;
+
+$info:              #14baa8;
+$success:           #22b66e;
+$warning:           #fdab29;
+$danger:            #ea2e49;
+
+$light:             #f9fafc;
+$dark:              #1e2835;
+$white:				#ffffff;
+
+$primary-color:     $light-white;
+$accent-color:		$light-white;
+$warn-color:		$light-white;
+$success-color:		$light-white;
+$info-color:		$light-white;
+$warning-color:		$light-white;
+$danger-color:     	$light-white;
+$light-color:		$dark-black;
+$dark-color:		$dark-white;
+$active-color:      rgba(22, 32, 42, 0.15);
+
+$body-bg:       	#f3f6f9;
+$text-color:        $dark-black;
+$text-muted:        $light-black;
+
+$enable-shadows:	true;
+$enable-hover-media-query: true;
+
+$border-color:	 	rgba(120, 130, 140, 0.130);
+$border-color-lt:	rgba(120, 130, 140, 0.065);
+
+$font-family-serif:         Georgia, "Times New Roman", Times, serif;
+
+$font-size:          	  	0.8rem;
+$line-height:			  	1.6;
+
+$font-size-lg:            	1.5rem;
+$font-size-md:              1.125rem;
+$font-size-sm:            	0.75rem;
+$font-size-xs:            	0.70rem;
+
+$hover-color: 			  	inherit;
+$color-percent:           	2.5%;
+$color-lt-percent:        	3.5%;
+$color-dk-percent:        	3.5%;
+
+$border-radius-base:      	3px;
+
+$navbar-height:                  3.5rem;
+$navbar-brand-height:            2.5rem;
+$navbar-brand-size: 			 1.125rem;
+
+$aside-width:                    13rem;
+$aside-slide-width:              17.5rem;
+$aside-folded-width:             5rem;
+$aside-folded-md-width:          5.5rem;
+$aside-nav-height:               2.25rem;
+$aside-nav-folded-height:        2.5rem;
+$aside-nav-sub-height:           2rem;
+$aside-nav-stacked-height:		 2rem;
+$aside-nav-stacked-margin:       0.15rem;
+$aside-nav-icon-margin:          0.5rem;
+$aside-nav-icon-size:			 1rem;
+$aside-nav-folded-icon-size:     1rem;
+
+$footer-height:					 3.125rem;
+
+$table-border-color:             $border-color-lt;
+$table-striped-color:            rgba(0, 0, 0, 0.025);
+$list-group-border:				 $border-color-lt;
+
+$input-border:                   rgba(120, 130, 140, 0.2);
+$input-border-focus:             $primary;
+$input-border-radius:            0.25rem;
+
+$arrow-width:         			 6px;
+$arrow-outer-color:              $border-color;
+
+$switch-width:                   32px;
+$switch-height:                  18px;
+$switch-md-width:                40px;
+$switch-md-height:               24px;
+$switch-lg-width:                50px;
+$switch-lg-height:               30px;
+
+$ui-check-size:                  16px;
+$ui-check-md-size:               24px;
+$ui-check-lg-size:               30px;
+$ui-check-sign-size:             6px;
+$ui-check-sign-color:            $primary;
+$ui-check-checked-border:        $input-border;
