@@ -9,4 +9,5 @@ export const LANDING_LAYOUTS_ROUTES: Routes = [
 
    { path: 'testProject/guest', component: HomeComponent },
 
+   { path: '', pathMatch: 'full', redirectTo: '/testProject/guest' },
 ];
